@@ -1,0 +1,5 @@
+import sys
+inputs = sys.stdin.read().split()
+if inputs:
+ unique_elements = list(dict.fromkeys(inputs))
+   print(*(unique_elements))
