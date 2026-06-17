@@ -1,0 +1,23 @@
+def find_factors(number):
+
+    if number == 0:
+        return "No Factors"
+    
+    number = abs(number)
+    factors = []
+    
+    for i in range(1, int(number ** 0.5) + 1):
+        if number % i == 0:
+            factors.append(i)
+            if i != number // i:
+                factors.append(number // i)
+                
+    return sorted(factors)
+
+
+try:
+    user_input = int(input("Enter a number: "))
+    result = find_factors(user_input)
+    print(result)
+except ValueError:
+    print("Please enter a valid whole number.")
