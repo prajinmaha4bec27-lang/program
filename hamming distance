@@ -1,0 +1,7 @@
+import sys
+inputs = sys.stdin.read().split()
+
+if len(inputs) >= 2:
+    x = int(inputs[0])
+    y = int(inputs[1])
+    print(bin(x ^ y).count('1'))
